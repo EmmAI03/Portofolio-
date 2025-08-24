@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnimatedSection from './AnimatedSection';
+import AnimatedSection from './AnimatedSection'; // Pastikan import ini ada
 import { projects } from '../data/portfolioData';
 
-// Ikon untuk tombol close yang lebih modern
-const CloseIcon = (props) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
-);
-
 const ProjectsSection = () => {
+    // ... (kode internal lainnya tetap sama)
     const [selectedProject, setSelectedProject] = useState(null);
+    const CloseIcon = (props) => (
+        <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    );
 
     return (
         <>
-            <AnimatedSection id="projects" className="py-16 bg-white/70 backdrop-blur-sm">
+            {/* Diubah menjadi bg-transparent */}
+            <AnimatedSection id="projects" className="py-16 bg-transparent">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-bold text-center mb-4 text-slate-800">Featured Projects</h2>
+                    {/* ... konten section ... */}
                     <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
                         A curated selection of my work. Click on any project to see the details.
                     </p>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project, index) => (
                             <motion.div
@@ -54,8 +54,7 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </AnimatedSection>
-
-            {/* Modal Pop-up dengan Desain Baru */}
+            {/* ... (kode modal) ... */}
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div
@@ -66,40 +65,23 @@ const ProjectsSection = () => {
                         onClick={() => setSelectedProject(null)}
                     >
                         <motion.div
-                            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl border grid grid-cols-1 md:grid-cols-2"
+                            className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative shadow-2xl border"
                             layoutId={`project-card-${projects.indexOf(selectedProject)}`}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {/* Kolom Kiri: Deskripsi */}
-                            <div className="p-8 flex flex-col">
-                                <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text">
-                                    {selectedProject.title}
-                                </h2>
-                                <p className="text-slate-600 mb-6 leading-relaxed flex-grow overflow-y-auto">
-                                    {selectedProject.longDescription}
-                                </p>
-                                <div className="flex flex-wrap gap-2 mt-4">
-                                    {selectedProject.tags.map((tag, i) => (
-                                        <span key={i} className="text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">{tag}</span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Kolom Kanan: Galeri Gambar */}
-                            <div className="overflow-y-auto h-full p-4 bg-slate-50">
-                                <div className="space-y-4">
-                                     {selectedProject.images.map((img, i) => (
-                                        <img key={i} src={img} alt={`${selectedProject.title} - image ${i+1}`} className="rounded-lg w-full h-auto object-cover" />
-                                    ))}
-                                </div>
-                            </div>
-
                             <button 
                                 onClick={() => setSelectedProject(null)}
-                                className="absolute top-4 right-4 text-slate-500 hover:text-slate-900 transition-colors z-10 bg-white/50 rounded-full p-1"
+                                className="absolute top-4 right-4 text-slate-500 hover:text-slate-900 transition-colors z-10"
                             >
                                 <CloseIcon />
                             </button>
+                            <h2 className="text-3xl font-bold text-slate-800 mb-4">{selectedProject.title}</h2>
+                            <p className="text-slate-600 mb-6 leading-relaxed">{selectedProject.longDescription}</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                                {selectedProject.images.map((img, i) => (
+                                    <img key={i} src={img} alt={`${selectedProject.title} - image ${i+1}`} className="rounded-lg w-full h-auto object-cover border" />
+                                ))}
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}
@@ -107,5 +89,4 @@ const ProjectsSection = () => {
         </>
     );
 };
-
 export default ProjectsSection;

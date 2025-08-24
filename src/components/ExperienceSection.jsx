@@ -20,8 +20,8 @@ const ExperienceSection = () => {
     );
 
     return (
-        // Menggunakan padding vertikal 'py-16' agar lebih padat
-        <AnimatedSection id="experience" className="py-16">
+        // Latar belakang diubah menjadi transparan
+        <AnimatedSection id="experience" className="py-16 bg-transparent">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Work & Volunteer Experience</h2>
                 

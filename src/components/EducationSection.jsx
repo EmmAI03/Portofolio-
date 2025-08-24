@@ -1,37 +1,34 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnimatedSection from './AnimatedSection'; // Pastikan komponen ini ada
+import AnimatedSection from './AnimatedSection'; // <-- BARIS INI DITAMBAHKAN
 import { education, certifications } from '../data/portfolioData';
-import { ICONS } from '../data/icons'; // Pastikan ICONS.BookOpen dan ICONS.Award ada
-
-const CloseIcon = (props) => (
-    <svg {...props} xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
-);
+import { ICONS } from '../data/icons';
 
 const EducationSection = () => {
+    // ... (kode internal lainnya tetap sama)
     const [selectedImage, setSelectedImage] = useState(null);
-
     const cardVariants = {
         hidden: { y: 50, opacity: 0 },
         visible: (i) => ({
-            y: 0,
-            opacity: 1,
+            y: 0, opacity: 1,
             transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" }
         })
     };
+    const CloseIcon = (props) => (
+        <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    );
 
     return (
         <>
-            <AnimatedSection id="education" className="py-24 bg-slate-50/80 backdrop-blur-sm">
+            {/* Diubah menjadi bg-transparent */}
+            <AnimatedSection id="education" className="py-16 bg-transparent">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">Education & Certifications</h2>
-                    
+                    {/* ... konten section ... */}
                     <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-                        
-                        {/* Education Card */}
                         <motion.div
                             className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200/80 flex flex-col"
                             custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={cardVariants}
@@ -51,15 +48,12 @@ const EducationSection = () => {
                                     <span className="font-bold text-blue-600">{education.gpa}</span>
                                 </div>
                             </div>
-                            {/* Image Gallery */}
                             <div className="mt-6">
                                 <h4 className="font-semibold text-slate-700 mb-2 text-sm">Gallery</h4>
                                 <div className="grid grid-cols-3 gap-2">
                                     {education.images.map((img, i) => (
                                         <motion.img 
-                                            key={i} 
-                                            src={img} 
-                                            alt={`Education gallery ${i+1}`}
+                                            key={i} src={img} alt={`Education gallery ${i+1}`}
                                             className="rounded-md w-full h-20 object-cover cursor-pointer"
                                             onClick={() => setSelectedImage(img)}
                                             whileHover={{ scale: 1.05 }}
@@ -69,7 +63,6 @@ const EducationSection = () => {
                             </div>
                         </motion.div>
 
-                        {/* Certifications Card */}
                         <motion.div
                             className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200/80"
                             custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={cardVariants}
@@ -89,12 +82,10 @@ const EducationSection = () => {
                                 ))}
                             </ul>
                         </motion.div>
-
                     </div>
                 </div>
             </AnimatedSection>
-
-            {/* Image Modal */}
+            {/* ... (kode modal) ... */}
             <AnimatePresence>
                 {selectedImage && (
                     <motion.div
@@ -103,15 +94,11 @@ const EducationSection = () => {
                         onClick={() => setSelectedImage(null)}
                     >
                         <motion.img 
-                            src={selectedImage} 
-                            alt="Selected education"
+                            src={selectedImage} alt="Selected education"
                             className="max-w-[90vw] max-h-[90vh] rounded-xl shadow-2xl"
                             initial={{ scale: 0.8 }} animate={{ scale: 1 }} exit={{ scale: 0.8 }}
                         />
-                         <button 
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute top-4 right-4 text-white hover:text-slate-300"
-                        >
+                         <button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 text-white hover:text-slate-300">
                             <CloseIcon />
                         </button>
                     </motion.div>
@@ -120,5 +107,4 @@ const EducationSection = () => {
         </>
     );
 };
-
 export default EducationSection;
