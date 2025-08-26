@@ -47,7 +47,13 @@ const ProjectsSection = () => {
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSelectedProject(null)}>
-                        <motion.div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] shadow-2xl border grid grid-cols-1 md:grid-cols-2" layoutId={`project-card-${projects.indexOf(selectedProject)}`} onClick={(e) => e.stopPropagation()}>
+                        {/* PERBAIKAN: Mengatur tinggi dan overflow pada container utama modal */}
+                        <motion.div 
+                            className="bg-white rounded-2xl max-w-4xl w-full h-[90vh] overflow-hidden shadow-2xl border grid grid-cols-1 md:grid-cols-2" 
+                            layoutId={`project-card-${projects.indexOf(selectedProject)}`} 
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* Kolom kiri (deskripsi) sekarang bisa di-scroll */}
                             <div className="p-8 flex flex-col overflow-y-auto">
                                 <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text">{selectedProject.title}</h2>
                                 <div className="space-y-4 text-sm text-slate-600">
@@ -58,7 +64,14 @@ const ProjectsSection = () => {
                                 </div>
                                 <div className="mt-6 pt-4 border-t"><h4 className="font-bold text-slate-800 mb-2">Tech Stack</h4><div className="flex flex-wrap gap-2">{selectedProject.techStack.map((tech, i) => ( <span key={i} className="text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">{tech}</span> ))}</div></div>
                             </div>
-                            <div className="overflow-y-auto h-full p-4 bg-slate-50"><div className="space-y-4">{selectedProject.images.map((img, i) => ( <img key={i} src={img} alt={`${selectedProject.title} - image ${i+1}`} className="rounded-lg w-full h-auto object-cover" /> ))}</div></div>
+                            {/* Kolom kanan (galeri) sekarang bisa di-scroll */}
+                            <div className="overflow-y-auto p-4 bg-slate-50">
+                                <div className="space-y-4">
+                                    {selectedProject.images.map((img, i) => ( 
+                                        <img key={i} src={img} alt={`${selectedProject.title} - image ${i+1}`} className="rounded-lg w-full h-auto object-cover" /> 
+                                    ))}
+                                </div>
+                            </div>
                             <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 text-slate-500 hover:text-slate-900 transition-colors z-10 bg-white/50 rounded-full p-1"><CloseIcon /></button>
                         </motion.div>
                     </motion.div>
