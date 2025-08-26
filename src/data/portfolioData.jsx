@@ -168,7 +168,7 @@ export const projects = [
     {
         title: "PGPB Innovation on Strawberry",
         shortDescription: "Led an R&D project to apply PGPB, resulting in improved crop quality and yield.",
-        images: ["/projects/placeholder-1.png", "/projects/placeholder-2.png"],
+        images: ["placeholder-1.png", "placeholder-2.png"],
         tags: ["R&D", "Agriculture Tech", "Data Analysis"],
         challenge: "Local strawberry varieties in Malang faced issues with inconsistent fruit quality and susceptibility to disease, impacting their market value.",
         myRole: "As the lead agronomist on this R&D project, I was responsible for the entire experimental lifecycle, from research design and bacterial isolation to field implementation and data analysis.",
@@ -179,7 +179,7 @@ export const projects = [
     {
         title: "Financial System Optimization for BEM",
         shortDescription: "Successfully utilized 100% of the faculty budget and stabilized the endowment fund.",
-        images: ["/projects/placeholder-3.png", "/projects/placeholder-4.png"],
+        images: ["placeholder-3.png", "placeholder-4.png"],
         tags: ["Financial Management", "Project Management", "Leadership"],
         challenge: "The student executive board (BEM) faced challenges with budget tracking, fund allocation, and ensuring financial accountability across 24 different work programs.",
         myRole: "As the Head of the Administration and Finance Bureau, I acted as the central financial controller, responsible for budgeting, reporting, and strategic financial planning.",
@@ -240,19 +240,54 @@ export const volunteerExperience = [
         role: "Chief Organizer",
         company: "Proteksi - Dept. of Plant Pests and Diseases",
         date: "Aug 2024 – Oct 2024",
-        description: "Designed and managed all committee work for a 3-month professional education event, overseeing 86 committee members across 8 divisions for 142 participants."
+        description: "Designed, executed, and managed a 3-month professional education program for 142 participants. Supervised 86 committee members across 8 divisions, distributed tasks strategically, and monitored progress through reports and open discussions."
     },
     {
         role: "Sea Turtle Conservation Volunteer",
-        company: "Involunteer - South Coast",
+        company: "Involunteer - South Coast (Banjulmati Beach)",
         date: "May 2024",
-        description: "Cared for turtle hatchlings and participated in coastal conservation efforts, including mangrove planting at Banjulmati Beach."
+        description: "Cared for turtle hatchlings, contributed to coastal conservation through mangrove planting, and learned about sustainable coastal ecosystem management."
     },
     {
         role: "Treasurer",
         company: "Poster, PKKMB & PPM Faculty of Agriculture",
         date: "July 2023 – Nov 2023",
-        description: "Managed budget planning with 100% fund absorption and handled financial & tax reporting for ±70 faculty partners."
+        description: "Planned and managed the budget with 100% fund absorption, prepared financial and tax reports (PKP & Non-PKP) for ±70 faculty partners, and facilitated communication between faculty bureaucracy and student committees."
     },
+    {
+        role: "Treasurer",
+        company: "Dies Natalis Faculty of Agriculture & Feast of Agriculture",
+        date: "Nov 2023 – Dec 2023",
+        description: "Coordinated fundraising, managed budget planning, ensured compliance with financial and tax reporting, and facilitated collaboration between faculty and student committees."
+    },
+    {
+        role: "Field Coordinator",
+        company: "Kampung Budaya Universitas Brawijaya",
+        date: "Sep 2023 – Oct 2023",
+        description: "Led the main event series, developed technical guidelines (SOP) for event execution, and coordinated implementation of the Gelora Puncak Kampung Budaya program."
+    },
+    {
+        role: "Executive Secretary",
+        company: "Open House Faculty of Agriculture",
+        date: "Aug 2022 – Nov 2022",
+        description: "Documented meeting minutes, maintained inter-team communication, and prepared proposals and accountability reports."
+    },
+    {
+        role: "Administrative Staff (Kestari)",
+        company: "Kampung Budaya Universitas Brawijaya",
+        date: "Sep 2022 – Oct 2022",
+        description: "Managed administrative correspondence and documentation for Kampung Budaya events from preparation to execution."
+    },
+    {
+        role: "Public Relations & Sponsorship Staff",
+        company: "Brawijaya Future Talk",
+        date: "Aug 2022",
+        description: "Served as liaison officer for 4 main speakers and engaged 20 media partners for event promotion."
+    },
+    {
+        role: "Event Staff & MC",
+        company: "Knowledge of Administration",
+        date: "Apr 2022",
+        description: "Created event rundown and acted as master of ceremony for an event involving 19 Student Sovereignty Institutions of the Faculty of Agriculture."
+    }
 ];
-

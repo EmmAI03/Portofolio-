@@ -1,13 +1,29 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 import { projects } from '../data/portfolioData';
 
-const CloseIcon = (props) => ( <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> );
+const CloseIcon = (props) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+);
 
 const ProjectsSection = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [selectedProject]);
+
     return (
         <>
             <AnimatedSection id="projects" className="py-16 bg-white/70 backdrop-blur-sm">
@@ -31,7 +47,7 @@ const ProjectsSection = () => {
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setSelectedProject(null)}>
-                        <motion.div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl border grid grid-cols-1 md:grid-cols-2" layoutId={`project-card-${projects.indexOf(selectedProject)}`} onClick={(e) => e.stopPropagation()}>
+                        <motion.div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] shadow-2xl border grid grid-cols-1 md:grid-cols-2" layoutId={`project-card-${projects.indexOf(selectedProject)}`} onClick={(e) => e.stopPropagation()}>
                             <div className="p-8 flex flex-col overflow-y-auto">
                                 <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text">{selectedProject.title}</h2>
                                 <div className="space-y-4 text-sm text-slate-600">
@@ -51,4 +67,5 @@ const ProjectsSection = () => {
         </>
     );
 };
+
 export default ProjectsSection;
