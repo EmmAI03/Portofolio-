@@ -26,6 +26,7 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Link "Skills" telah dihapus dari navigasi
     const navLinks = ["About", "Competences", "Experience", "Education", "Projects"];
 
     return (
@@ -34,7 +35,6 @@ const Navbar = () => {
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <a href="#about" className="text-xl font-bold text-slate-800">Emmy R.</a>
                     
-                    {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8">
                         {navLinks.map(link => (
                             <a key={link} href={`#${link.toLowerCase()}`} className="text-slate-600 hover:text-blue-600 transition-colors font-medium">
@@ -43,7 +43,6 @@ const Navbar = () => {
                         ))}
                     </div>
 
-                    {/* Mobile Menu Button */}
                     <div className="md:hidden">
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-800">
                             {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -52,7 +51,6 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Mobile Menu Panel */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -67,7 +65,7 @@ const Navbar = () => {
                                     key={link} 
                                     href={`#${link.toLowerCase()}`} 
                                     className="text-2xl text-slate-700 hover:text-blue-600"
-                                    onClick={() => setIsMenuOpen(false)} // Close menu on click
+                                    onClick={() => setIsMenuOpen(false)}
                                 >
                                     {link}
                                 </a>
