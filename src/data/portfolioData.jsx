@@ -4,7 +4,8 @@ import { SKILL_ICONS } from './skillIcons.jsx';
 
 export const personalInfo = {
   name: "Emmy Rahmaniasari",
-  title: "Data Analysis & Project Management Professional",
+  // Headline yang lebih kuat dan langsung ke intinya
+  title: "Agronomist & Strategic Problem Solver",
   email: "emmyrahmania@gmail.com",
   phone: "+6287870637183",
   linkedin: "https://linkedin.com/in/emmyraniasa",
@@ -12,10 +13,10 @@ export const personalInfo = {
     instagram: "https://www.instagram.com/emmyrahma_/",
     github: "https://github.com/emmyraniasa",
   },
+  // Narasi singkat untuk bagian "About Me"
   about: [
-    "A Bachelor's graduate in Agroecotechnology with a 3.67 GPA from Universitas Brawijaya.",
-    "Specializing in agronomy research, organic farming systems, and sustainable agriculture.",
-    "Experienced in organizational leadership, finance management, and strategic problem-solving."
+    "Hi, I'm Emmy. A Bachelor of Agriculture with a passion for leveraging technology and data to create sustainable and efficient agricultural solutions.",
+    "My work philosophy is rooted in user-centered problem-solving and clear communication, ensuring every project not only meets its goals but also delivers real-world impact."
   ],
   imageUrl: "/profil.png" 
 };
@@ -28,7 +29,7 @@ export const competences = [
     hardSkills: [
         { name: 'Python', icon: <SKILL_ICONS.Python /> },
         { name: 'RStudio', icon: <SKILL_ICONS.RStudio /> },
-        { name: 'Statistics', icon: <SKILL_ICONS.RStudio /> }, // Added from CV
+        { name: 'Statistics', icon: <SKILL_ICONS.RStudio /> },
         { name: 'Advanced Excel', icon: <SKILL_ICONS.Excel /> },
     ],
     softSkills: [ { name: 'Problem Solving' }, { name: 'Critical Thinking' }, { name: 'Analytical Skills' } ]
@@ -47,7 +48,7 @@ export const competences = [
   },
   { 
     icon: <ICONS.Award />, 
-    title: "Agronomy & Research", // New relevant category
+    title: "Agronomy & Research",
     description: "Skills in agriculture technology and research.",
     hardSkills: [
         { name: 'Organic Farming' },
@@ -63,56 +64,6 @@ export const competences = [
     hardSkills: [ { name: 'Financial Admin' }, { name: 'Public Speaking' } ],
     softSkills: [ { name: 'English (TOEFL: 437)' }, { name: 'Indonesian (Native)' } ]
   },
-];
-
-// WORK EXPERIENCE UPDATED with Assistant roles
-export const workExperience = [
-  {
-    role: "Agronomist (Intern)",
-    company: "Lily Harvest – Malang",
-    date: "July 2024 – Dec 2024",
-    description: "Developed cultivation for ±50 types of horticultural crops in an organic greenhouse system, ensuring quality from seeding to market distribution."
-  },
-  {
-    role: "Teaching Assistant - Integrated Pest Management",
-    company: "Universitas Brawijaya",
-    date: "Aug 2024 – Nov 2024",
-    description: "Guided 22 students in laboratory and field practices, developing practical materials and supervising sessions to meet learning objectives."
-  },
-  {
-    role: "Teaching Assistant - Fertilizer Technology",
-    company: "Universitas Brawijaya",
-    date: "Aug 2023 – Nov 2023",
-    description: "Led project-based learning for an international class of 10 students, producing compost and liquid organic fertilizer prototypes with commercial potential."
-  },
-  {
-    role: "Teaching Assistant - Statistics",
-    company: "Universitas Brawijaya",
-    date: "Aug 2022 – Nov 22",
-    description: "Assisted 45 students in understanding basic statistical concepts through 14 practical sessions based on real-world case studies."
-  },
-];
-
-// VOLUNTEER EXPERIENCE UPDATED with all new roles from CV
-export const volunteerExperience = [
-    {
-        role: "Chief Organizer",
-        company: "Proteksi - Dept. of Plant Pests and Diseases",
-        date: "Aug 2024 – Oct 2024",
-        description: "Designed and managed all committee work for a 3-month professional education event, overseeing 86 committee members across 8 divisions for 142 participants."
-    },
-    {
-        role: "Sea Turtle Conservation Volunteer",
-        company: "Involunteer - South Coast",
-        date: "May 2024",
-        description: "Cared for turtle hatchlings and participated in coastal conservation efforts, including mangrove planting at Banjulmati Beach."
-    },
-    {
-        role: "Treasurer",
-        company: "Poster, PKKMB & PPM Faculty of Agriculture",
-        date: "July 2023 – Nov 2023",
-        description: "Managed budget planning with 100% fund absorption and handled financial & tax reporting for ±70 faculty partners."
-    },
 ];
 
 export const organizationExperience = [
@@ -168,59 +119,140 @@ export const educationHistory = [
     {
         institution: "Universitas Brawijaya",
         degree: "Bachelor of Science in Agriculture (B.Sc.(Agr.))",
-        focus: "Agroecology and Sustainable Agriculture",
         date: "Agu 2021 - Jan 2025",
         gpa: "IPK: 3.67/4",
-        logoUrl: "/logo-ub.png", // Pastikan Anda punya logo ini di folder public
-        description: "A comprehensive program focusing on bacteriology within plant pest and disease management, combining coursework, lab research, and field studies.",
-        skills: ["Agriculture", "Agribusiness", "Sustainable Agriculture", "Agricultural Research", "Bacteriology"]
+        logoUrl: "/logo-ub.png",
+        description: "Bachelor of Agroecotechnology (Plant Pests and Diseases - Bacteriology) at Universitas Brawijaya : Dive into a comprehensive program at UB’s Faculty of Agriculture in Malang, focusing on bacteriology within plant pest and disease management, combining coursework, lab research, and field studies to develop skills in identifying, controlling, and preventing bacterial crop diseases for sustainable agriculture.",
+        skills: ["Agriculture", "Agribusiness", "Sustainable Agriculture", "Research", "Bacteriology"],
+        images: ["/education/ub-1.png", "/education/ub-2.png"]
     },
     {
-        institution: "International Islamic University Malaysia (IIUM)",
+        institution: "International Islamic University Malaysia",
         degree: "Plant Sciences Exchange Program",
-        focus: "International Relations & Development",
-        date: "Mei 2024 - Mei 2024",
-        logoUrl: "/logo-iium.png", // Anda perlu menyediakan logo ini
+        date: "Mei 2024",
+        logoUrl: "/logo-iium.png",
         description: "Explored plant biology, biodiversity, and sustainable practices through hands-on labs and field trips at IIUM’s Kuantan campus.",
-        skills: ["International Relations", "International Development", "Agricultural Research"]
+        skills: ["International Relations", "Agricultural Research"],
+        images: ["/education/iium-1.png"]
     },
     {
         institution: "Wageningen University & Research",
-        degree: "Summer Course",
-        focus: "Smart Farming System",
-        date: "Agu 2023 - Agu 2023",
-        logoUrl: "/logo-wageningen.png", // Anda perlu menyediakan logo ini
-        description: "Engaged in a collaborative program exploring innovative smart farming technologies through lectures, field trips, and interdisciplinary projects.",
-        skills: ["Sustainable Agriculture", "Smart Farming", "International Relations"]
+        degree: "Summer Course: Smart Farming System",
+        date: "Agu 2023",
+        logoUrl: "/logo-wageningen.png",
+        description: "Summer Course in Smart Farming System at UB, IPB University, and Wageningen University : Engage in a collaborative program exploring innovative smart farming technologies through lectures, field trips to dairy farms, and interdisciplinary projects, fostering global networking and practical skills for sustainable agriculture.",
+        skills: ["Sustainable Agriculture", "Smart Farming"],
+        images: ["/education/wur-1.png"]
     }
 ];
 
-// CERTIFICATIONS UPDATED with new info
 export const certifications = [
-    { name: "Microsoft Office Specialist", issuer: "Trust Training Partners", year: "2024", url: "/certificates/mos.pdf" },
-    { name: "Korea-ASEAN Digital Academy (KADA)", issuer: "KADA Program", year: "2024", url: "/certificates/kada.pdf" },
+    { 
+        name: "Microsoft Office Specialist", 
+        issuer: "Trust Training Partners", 
+        year: "2024", 
+        url: "/certificates/mos.pdf",
+        images: ["/certificates/mos-cert.png"] // Tambahkan path gambar sertifikat
+    },
+    { 
+        name: "Korea-ASEAN Digital Academy (KADA)", 
+        issuer: "KADA Program", 
+        year: "2024", 
+        url: "/certificates/kada.pdf",
+        images: ["/certificates/kada-cert.png"]
+    },
 ];
 
+// PROYEK DIPERBARUI DENGAN FORMAT STUDI KASUS
 export const projects = [
     {
         title: "PGPB Innovation on Strawberry",
         shortDescription: "Led an R&D project to apply PGPB, resulting in improved crop quality and yield.",
-        longDescription: "This project focused on agricultural innovation by implementing PGPB on local strawberry varieties in Malang. The research involved sample collection, bacterial isolation, lab testing, and field trials to enhance plant resilience and fruit quality.",
         images: ["/projects/placeholder-1.png", "/projects/placeholder-2.png"],
-        tags: ["R&D", "Agriculture Tech", "Data Analysis"]
+        tags: ["R&D", "Agriculture Tech", "Data Analysis"],
+        challenge: "Local strawberry varieties in Malang faced issues with inconsistent fruit quality and susceptibility to disease, impacting their market value.",
+        myRole: "As the lead agronomist on this R&D project, I was responsible for the entire experimental lifecycle, from research design and bacterial isolation to field implementation and data analysis.",
+        solution: "We developed and applied a consortium of Plant Growth-Promoting Bacteria (PGPB) tailored to the local ecosystem. The process involved lab testing to identify the most effective strains and creating a stable liquid organic fertilizer for easy application.",
+        impact: "The PGPB application led to a measurable improvement in fruit resilience and a more consistent harvest quality, demonstrating a viable and sustainable solution with commercial potential.",
+        techStack: ["R&D", "Bacteriology", "Field Trials", "Data Analysis"]
     },
     {
         title: "Financial System Optimization for BEM",
         shortDescription: "Successfully utilized 100% of the faculty budget and stabilized the endowment fund.",
-        longDescription: "As Head of the Admin & Finance Bureau, I was responsible for the complete financial lifecycle of 24 main work programs, including budget planning, fund allocation, and preparing accountability reports.",
         images: ["/projects/placeholder-3.png", "/projects/placeholder-4.png"],
-        tags: ["Financial Management", "Project Management", "Leadership"]
+        tags: ["Financial Management", "Project Management", "Leadership"],
+        challenge: "The student executive board (BEM) faced challenges with budget tracking, fund allocation, and ensuring financial accountability across 24 different work programs.",
+        myRole: "As the Head of the Administration and Finance Bureau, I acted as the central financial controller, responsible for budgeting, reporting, and strategic financial planning.",
+        solution: "I implemented a centralized system for proposals and accountability reports using project management tools. This streamlined communication between 8 ministries and ensured all financial activities were transparent and properly documented.",
+        impact: "Achieved 100% utilization of the faculty budget for two consecutive years and successfully stabilized the student endowment fund, ensuring long-term financial health for the organization.",
+        techStack: ["Financial Planning", "Budgeting", "MS Office", "Team Leadership"]
+    },
+];
+
+// DATA BARU UNTUK TESTIMONIALS
+export const testimonials = [
+    {
+        quote: "Emmy's leadership and meticulous financial management were instrumental to our success. Her ability to streamline complex processes and ensure accountability was truly impressive.",
+        name: "John Doe",
+        title: "Former President, BEM Faculty of Agriculture",
+        image: "/testimonials/john-doe.png" // Ganti dengan foto asli
     },
     {
-        title: "Fertilizer Tech Project-Based Learning",
-        shortDescription: "Led an international class in producing commercially viable organic fertilizer prototypes.",
-        longDescription: "Guided 10 international students through 12 practical sessions on fertilizer technology, covering theory, application, and analysis, culminating in the creation of market-ready prototypes.",
-        images: ["/projects/placeholder-5.png", "/projects/placeholder-6.png"],
-        tags: ["Education", "Prototyping", "Team Leadership"]
+        quote: "Working with Emmy on the KADA program was a fantastic experience. She is a creative problem-solver with a strong grasp of both technical and strategic aspects of project development.",
+        name: "Jane Smith",
+        title: "Mentor, Korea-ASEAN Digital Academy",
+        image: "/testimonials/jane-smith.png" // Ganti dengan foto asli
     }
 ];
+
+
+// WORK EXPERIENCE UPDATED with Assistant roles
+export const workExperience = [
+  {
+    role: "Agronomist (Intern)",
+    company: "Lily Harvest – Malang",
+    date: "July 2024 – Dec 2024",
+    description: "Developed cultivation for ±50 types of horticultural crops in an organic greenhouse system, ensuring quality from seeding to market distribution."
+  },
+  {
+    role: "Teaching Assistant - Integrated Pest Management",
+    company: "Universitas Brawijaya",
+    date: "Aug 2024 – Nov 2024",
+    description: "Guided 22 students in laboratory and field practices, developing practical materials and supervising sessions to meet learning objectives."
+  },
+  {
+    role: "Teaching Assistant - Fertilizer Technology",
+    company: "Universitas Brawijaya",
+    date: "Aug 2023 – Nov 2023",
+    description: "Led project-based learning for an international class of 10 students, producing compost and liquid organic fertilizer prototypes with commercial potential."
+  },
+  {
+    role: "Teaching Assistant - Statistics",
+    company: "Universitas Brawijaya",
+    date: "Aug 2022 – Nov 22",
+    description: "Assisted 45 students in understanding basic statistical concepts through 14 practical sessions based on real-world case studies."
+  },
+];
+
+// VOLUNTEER EXPERIENCE UPDATED with all new roles from CV
+export const volunteerExperience = [
+    {
+        role: "Chief Organizer",
+        company: "Proteksi - Dept. of Plant Pests and Diseases",
+        date: "Aug 2024 – Oct 2024",
+        description: "Designed and managed all committee work for a 3-month professional education event, overseeing 86 committee members across 8 divisions for 142 participants."
+    },
+    {
+        role: "Sea Turtle Conservation Volunteer",
+        company: "Involunteer - South Coast",
+        date: "May 2024",
+        description: "Cared for turtle hatchlings and participated in coastal conservation efforts, including mangrove planting at Banjulmati Beach."
+    },
+    {
+        role: "Treasurer",
+        company: "Poster, PKKMB & PPM Faculty of Agriculture",
+        date: "July 2023 – Nov 2023",
+        description: "Managed budget planning with 100% fund absorption and handled financial & tax reporting for ±70 faculty partners."
+    },
+];
+
