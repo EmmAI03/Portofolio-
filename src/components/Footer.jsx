@@ -25,8 +25,8 @@ const Footer = () => {
                     {/* Column 1: Name and Contact */}
                     <div className="md:col-span-1">
                         <h3 className="text-2xl font-bold text-slate-800 mb-2">Emmy Rahmaniasari</h3>
-                        <p className="text-slate-600 mb-4">Data Analysis & Project Management Professional</p>
-                        <p lassName="text-slate-600 mb-4">A highly adaptable and fast-learning recent graduate. Proven foundation in project management and data analysis.Passionate about technology and developing innovative solutions.Committed to driving project success.</p>  
+                        <p className="text-slate-600 mb-4">Bachelor of Agriculture | Data Analysis | Community Leadership</p>
+                        <p lassName="text-slate-600 mb-4">Graduate of Agroecotechnology from Universitas Brawijaya with a GPA of 3.67, passionate about community empowerment and financial inclusion. Experienced in leading large-scale projects and managing cross-functional teams, with strong data analysis skills using Python and R. I am eager to integrate my knowledge in the agricultural sector with data-driven approaches to design innovative micro-business strategies and generate tangible socio-economic impact.</p>  
                         <a href={`mailto:${personalInfo.email}`} className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
                             {personalInfo.email}
                         </a>

@@ -5,7 +5,7 @@ import { SKILL_ICONS } from './skillIcons.jsx';
 export const personalInfo = {
   name: "Emmy Rahmaniasari",
   // Headline yang lebih kuat dan langsung ke intinya
-  title: "Agronomist & Strategic Problem Solver",
+  title: "Bachelor of Agriculture | Data Analysis | Community Leadership",
   email: "emmyrahmania@gmail.com",
   phone: "+6287870637183",
   linkedin: "https://linkedin.com/in/emmyraniasa",
