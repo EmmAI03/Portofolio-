@@ -204,6 +204,50 @@ export const projects = [
         impact: "Achieved 100% utilization of the faculty budget for two consecutive years and successfully stabilized the student endowment fund, ensuring long-term financial health for the organization.",
         techStack: ["Financial Planning", "Budgeting", "MS Office", "Team Leadership"]
     },
+     {
+        title: "Statistical Analysis of Plant Growth",
+        shortDescription: "Utilized RStudio to analyze experimental data and visualize the impact of various treatments on plant growth parameters.",
+        images: [
+            "r-boxplot-1.png", // Ganti dengan path gambar Anda
+            "r-boxplot-2.png", // Ganti dengan path gambar Anda
+            "r-boxplot-3.png"  // Ganti dengan path gambar Anda
+        ],
+        tags: ["RStudio", "Data Visualization", "Statistics"],
+        challenge: "Raw experimental data from an agricultural trial needed to be processed and analyzed to determine if different treatments had a statistically significant effect on key growth metrics like flower count, leaf count, and plant height.",
+        myRole: "As the Data Analyst, I was responsible for the entire analysis pipeline: data cleaning, transformation, visualization, and statistical interpretation using RStudio and the ggplot2 package.",
+        solution: "I created a series of comprehensive boxplots to visualize the distribution and variance of each growth parameter across different treatments and observation times. This visual approach made it easy to identify potential trends and outliers before conducting formal statistical tests (like ANOVA).",
+        impact: "The visualizations provided clear, immediate insights into the data, showing which treatments were most effective over time. This data-driven evidence was crucial for making informed recommendations for future research and practical application.",
+        techStack: ["RStudio", "ggplot2", "Data Visualization", "Statistical Analysis"]
+    },
+    {
+        title: "Land Suitability Analysis for Shallots",
+        shortDescription: "Conducted spatial analysis using ArcGIS to map land suitability for shallot cultivation in Batu City, East Java.",
+        images: [
+            "peta-bawang-merah.png", // Ganti dengan path gambar Anda
+        ],
+        tags: ["ArcGIS", "Spatial Analysis", "GIS"],
+        challenge: "Farmers in the Junrejo sub-district needed to identify optimal locations for shallot cultivation to increase yield and reduce risks. This required a comprehensive analysis of various environmental factors.",
+        myRole: "As the GIS Analyst, I was responsible for collecting spatial data, performing weighted overlay analysis, and creating the final suitability map. This included processing data on rainfall, soil type, and land elevation.",
+        solution: "Using ArcGIS, I created a detailed map that classified land into four suitability categories: Highly Suitable (S1), Moderately Suitable (S2), Marginally Suitable (S3), and Not Suitable (N). This provided a clear visual guide for agricultural planning.",
+        impact: "The resulting map serves as a crucial decision-making tool for local farmers and agricultural stakeholders, enabling them to optimize land use, improve crop management strategies, and potentially increase overall productivity in the region.",
+        techStack: ["ArcGIS", "GIS", "Spatial Data", "Cartography"]
+    },
+    {
+    title: "Insect Family Identification & Collection",
+    shortDescription: "A comprehensive entomology project involving field collection, preservation, and taxonomic identification of various insect orders and families.",
+    images: [
+        "entomology-collection.png", // Ganti dengan path gambar Anda
+        "entomology-collection-2.png", // Ganti dengan path gambar Anda
+        "entomology-collection-3.png"  // Ganti dengan path gambar Anda
+    ],
+    tags: ["Entomology", "Taxonomy", "Biology", "Research"],
+    challenge: "To build a comprehensive insect collection representing diverse orders and families, requiring meticulous field collection techniques and precise taxonomic identification skills.",
+    myRole: "As the lead researcher, I managed the entire project lifecycle, from planning collection trips and preserving specimens to identifying each insect to the family level using taxonomic keys and microscopy.",
+    solution: "A systematic approach was employed, involving various trapping methods for collection, proper pinning and mounting for preservation, and detailed morphological analysis for identification. The final collection was organized taxonomically in insect boxes.",
+    impact: "This project resulted in a well-curated entomological collection that serves as a valuable reference. It demonstrates strong practical skills in scientific research, specimen preservation, and taxonomic identification.",
+    techStack: ["Microscopy", "Taxonomic Keys", "Field Research", "Specimen Preservation"]
+},
+
 ];
 
 // DATA BARU UNTUK TESTIMONIALS
