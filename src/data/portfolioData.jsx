@@ -21,6 +21,23 @@ export const personalInfo = {
   imageUrl: "/profil.png" 
 };
 
+export const techStack = [
+    { name: 'React', logo: '/logos/react.png' },
+    { name: 'JavaScript', logo: '/logos/javascript.png' },
+    { name: 'Node.js', logo: '/logos/nodejs.png' },
+    { name: 'Python', logo: '/logos/python.png' },
+    { name: 'RStudio', logo: '/logos/rstudio.png' },
+    { name: 'MongoDB', logo: '/logos/mongodb.png' },
+    { name: 'MySQL', logo: '/logos/mysql.png' },
+    { name: 'AWS', logo: '/logos/aws.png' },
+    { name: 'Figma', logo: '/logos/figma.png' },
+    { name: 'Tailwind CSS', logo: '/logos/tailwind.png' },
+    { name: 'Asana', logo: '/logos/asana.png' },
+    { name: 'ClickUp', logo: '/logos/clickup.png' },
+    { name: 'MS Office', logo: '/logos/office.png' },
+    { name: 'MS Teams', logo: '/logos/teams.png' },
+    { name: 'Zoom', logo: '/logos/zoom.png' },
+];
 export const competences = [
   { 
     icon: <ICONS.Code />, 

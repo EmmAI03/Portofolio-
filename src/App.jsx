@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import AuroraBackground from './components/AuroraBackground';
 import ContactDock from './components/ContactDock';
 import StaticBackground from './components/StaticBackground';
+import TechStackSection from './components/TechStackSection';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <TechStackSection />
+        {/* <CompetencesSection /> */}
+        {/* <Testimonials /> */}
+        {/* <ContactForm /> */}
         <ExperienceSection />
         <OrganizationSection />
         <EducationSection />
