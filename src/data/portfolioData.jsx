@@ -247,7 +247,83 @@ export const projects = [
     impact: "This project resulted in a well-curated entomological collection that serves as a valuable reference. It demonstrates strong practical skills in scientific research, specimen preservation, and taxonomic identification.",
     techStack: ["Microscopy", "Taxonomic Keys", "Field Research", "Specimen Preservation"]
 },
-
+ {
+        title: "UB Seagrology: Marine Farming Innovation",
+        shortDescription: "A conceptual project for the PKM-GFK competition proposing an integrated marine farming system to enhance coastal food security.",
+        images: [ "/projects/ub-seagrology.png" ],
+        tags: ["Innovation", "Agro-Maritime", "Sustainability"],
+        challenge: "To develop a futuristic written concept that addresses Indonesia's food security challenges by leveraging untapped marine agricultural potential, specifically through seagrass and seaweed cultivation.",
+        myRole: "As the project leader, I orchestrated the conceptualization, research, and writing of the proposal. My role involved integrating agro-maritime science with sustainable development principles to create a cohesive and innovative solution.",
+        solution: "The 'UB Seagrology' concept proposed a closed-loop, multi-trophic aquaculture system that cultivates seagrass and seaweed alongside marine fauna. This system was designed to maximize productivity, minimize environmental impact, and create economic opportunities for coastal communities.",
+        impact: "The project was successfully submitted to the Dekan Cup, showcasing strong conceptual thinking, scientific writing, and the ability to formulate innovative solutions for complex national-level problems.",
+        techStack: ["Conceptual Design", "Scientific Writing", "Research", "Sustainable Development"]
+    },
+    {
+        title: "KADA Capstone: Project Management Mockup",
+        shortDescription: "Developed a functional UI mockup of a project management tool, similar to Trello and Monday.com, as a capstone project for the Korea-ASEAN Digital Academy.",
+        images: [ "/projects/kada-mockup.png" ],
+        tags: ["UI/UX", "Figma", "Project Management"],
+        challenge: "To apply theoretical knowledge of digital project management into a tangible product. The goal was to design a user-friendly interface that incorporated key features of modern collaborative platforms.",
+        myRole: "As the lead designer and project manager, I was responsible for the entire design lifecycle, from initial wireframing and feature planning in Figma to creating the final high-fidelity mockup and presenting the concept.",
+        solution: "A clean and intuitive dashboard was designed, featuring drag-and-drop task cards, customizable workflows, and team collaboration widgets. The design prioritized clarity and ease of use, inspired by industry-leading tools. The project can be viewed on GitHub.",
+        impact: "This capstone project successfully demonstrated a strong understanding of UI/UX principles and the practical application of project management concepts, earning positive feedback from mentors.",
+        techStack: ["Figma", "UI/UX Design", "Wireframing", "Prototyping", "Agile Methodology"]
+    },
+    {
+        title: "Plant Pathogen Identification",
+        shortDescription: "A laboratory-based project focused on the microscopic and macroscopic identification of key pathogens causing diseases in agricultural crops.",
+        images: [ "/projects/pathogen-microscope.png" ],
+        tags: ["Bacteriology", "Microscopy", "Lab Research"],
+        challenge: "To accurately identify various plant pathogens (bacteria, fungi) from infected plant samples, which is a critical first step in diagnosing and managing crop diseases effectively.",
+        myRole: "I conducted the hands-on laboratory work, which included sample preparation, culturing microorganisms, performing microscopic analysis, and documenting morphological characteristics to identify pathogens to the genus or species level.",
+        solution: "Standard laboratory protocols were meticulously followed, including slide preparation, staining techniques, and observation under a compound microscope. Macroscopic characteristics were observed from pure cultures grown on agar plates.",
+        impact: "This project sharpened my practical laboratory skills and deepened my expertise in plant bacteriology and pathology, reinforcing my ability to conduct precise scientific analysis.",
+        techStack: ["Microscopy", "Aseptic Technique", "Pathogen Culturing", "Scientific Documentation"]
+    },
+    {
+        title: "KKN UB: Community Nutrition Project",
+        shortDescription: "Led a community service project as part of the 'Mahasiswa Membangun Desa' program, focusing on nutrition education for elementary school children.",
+        images: [ "/projects/kkn-gizi.png" ],
+        tags: ["Community Service", "Project Management", "Education"],
+        challenge: "To address the issue of poor nutritional awareness among second-grade students in a rural village. The project needed to be engaging, educational, and impactful within a limited timeframe.",
+        myRole: "As the project secretary, I was responsible for planning, documentation, and coordination. I designed the educational materials and structured the interactive sessions to ensure the program's objectives were met effectively.",
+        solution: "An interactive educational program was developed and implemented, featuring fun learning activities, visual aids, and healthy snack demonstrations to teach the importance of balanced nutrition.",
+        impact: "The program was successfully delivered to over 50 students, leading to a noticeable increase in their nutritional knowledge and enthusiasm for healthy eating, as measured by pre- and post-activity quizzes.",
+        techStack: ["Project Coordination", "Public Speaking", "Community Engagement", "Educational Material Design"]
+    },
+    {
+        title: "Advanced Financial Management",
+        shortDescription: "A comprehensive project showcasing end-to-end financial management skills, including budgeting (RAB), tax compliance (PPh 21 & 22), and auditing.",
+        images: [ "/projects/finance-report.png" ],
+        tags: ["Finance", "Budgeting", "Taxation", "Auditing"],
+        challenge: "To manage the complete financial lifecycle for organizational programs, ensuring full compliance with tax regulations, maintaining budgetary control, and ensuring transparency.",
+        myRole: "As the lead financial officer, I was responsible for creating detailed budgets (RAB), calculating and reporting PPh 21 and PPh 22 taxes, monitoring all expenditures against the budget, and conducting internal audits to verify financial integrity.",
+        solution: "Developed comprehensive budget spreadsheets to track planned versus actual spending. Implemented a systematic process for tax documentation and timely reporting. Regular internal audits were conducted to ensure accountability.",
+        impact: "Achieved 100% compliance with financial regulations and maintained a balanced budget across multiple high-stakes projects. The clear financial reporting provided crucial data for future strategic planning.",
+        techStack: ["Advanced Excel", "Financial Modeling", "Tax Compliance", "Auditing Principles"]
+    },
+    {
+        title: "Systematic Administrative Workflow",
+        shortDescription: "Developed and managed a professional administrative system covering proposal creation, correspondence, archiving, and inventory management.",
+        images: [ "/projects/admin-docs.png" ],
+        tags: ["Administration", "Documentation", "Organization"],
+        challenge: "To create a streamlined and efficient administrative workflow that ensures all official documentation is standardized, easily accessible, and properly archived for future reference.",
+        myRole: "I led all administrative functions, where I was responsible for drafting official proposals and letters, establishing a logical archiving system (both digital and physical), and managing the inventory of organizational assets.",
+        solution: "Implemented a digital-first documentation strategy using collaborative platforms. I designed standardized templates for proposals and official correspondence to ensure consistency and professionalism.",
+        impact: "Improved administrative process efficiency by over 30%, significantly reducing time spent on locating documents and ensuring all outgoing communications met professional standards.",
+        techStack: ["Microsoft Office Suite", "Google Workspace", "Archiving Systems", "Document Management"]
+    },
+    {
+        title: "Sea Turtle Conservation Volunteer",
+        shortDescription: "Engaged in hands-on conservation efforts for sea turtle hatchlings and coastal ecosystem restoration through mangrove planting.",
+        images: [ "/projects/turtle-conservation.png" ],
+        tags: ["Conservation", "Volunteer", "Marine Biology"],
+        challenge: "To actively contribute to the protection of endangered sea turtles and the restoration of their fragile coastal habitats, which are threatened by environmental changes.",
+        myRole: "As a conservation volunteer, I was directly involved in daily on-site activities. This included monitoring turtle nests, caring for hatchlings to ensure their safe release, and participating in mangrove reforestation programs.",
+        solution: "Provided hands-on care for turtle hatchlings to maximize their survival rate before release. I also participated in planting hundreds of mangrove saplings to help restore the coastal ecosystem, which serves as a natural barrier and vital marine habitat.",
+        impact: "Directly contributed to the release of healthy sea turtle hatchlings and the expansion of a critical mangrove forest, enhancing local biodiversity and long-term ecosystem resilience.",
+        techStack: ["Environmental Monitoring", "Field Research", "Conservation Practices", "Teamwork"]
+    },
 ];
 
 // DATA BARU UNTUK TESTIMONIALS
