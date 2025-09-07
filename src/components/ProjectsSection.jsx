@@ -32,10 +32,10 @@ const ProjectsSection = () => {
     };
   }, [selectedProject]);
 
-  // Ambil kategori unik (support multiple)
+  // Ambil kategori unik (support multiple category per project)
   const categories = ["All", ...new Set(projects.flatMap((p) => p.category))];
 
-  // Filter project sesuai kategori (support multiple)
+  // Filter project sesuai kategori
   const filteredProjects =
     activeCategory === "All"
       ? projects
@@ -120,8 +120,14 @@ const ProjectsSection = () => {
 
                     {/* Role & Impact preview */}
                     <div className="mt-3 text-xs text-slate-500">
-                      <p><span className="font-semibold">Role:</span> {project.myRole}</p>
-                      <p><span className="font-semibold">Impact:</span> {project.impact}</p>
+                      <p>
+                        <span className="font-semibold">Role:</span>{" "}
+                        {project.myRole}
+                      </p>
+                      <p>
+                        <span className="font-semibold">Impact:</span>{" "}
+                        {project.impact}
+                      </p>
                     </div>
 
                     {/* Tech Tags */}
@@ -159,13 +165,13 @@ const ProjectsSection = () => {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-white rounded-2xl max-w-4xl w-full h-[90vh] overflow-hidden shadow-2xl border grid grid-cols-1 md:grid-cols-2 relative"
+              className="bg-white rounded-2xl w-full sm:max-w-full md:max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl border flex flex-col md:grid md:grid-cols-2 relative"
               layoutId={`project-card-${projects.indexOf(selectedProject)}`}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Deskripsi */}
-              <div className="p-8 flex flex-col overflow-y-auto">
-                <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text">
+              <div className="p-6 md:p-8 flex flex-col overflow-y-auto">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-500 text-transparent bg-clip-text">
                   {selectedProject.title}
                 </h2>
                 <div className="space-y-4 text-sm text-slate-600">
@@ -215,6 +221,7 @@ const ProjectsSection = () => {
                 </div>
               </div>
 
+              {/* Tombol Close */}
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 text-slate-500 hover:text-slate-900 transition-colors z-10 bg-white/50 rounded-full p-1"
