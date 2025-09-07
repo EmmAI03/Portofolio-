@@ -15,13 +15,13 @@ const Navbar = () => {
     }, []);
 
     // Navigasi diperbarui
-    const navLinks = ["About", "Experience", "Education", "Projects"];
+    const navLinks = ["About", "Tech Stack", "Experience", "Education", "Projects","Intro Video"];
 
     return (
         <>
             <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled || isMenuOpen ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}>
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <a href="#about" className="text-xl font-bold text-slate-800">Emmy R.</a>
+                    <a href="#about" className="text-xl font-bold text-slate-800">Portofolio Emmy Rahmaniasari</a>
                     <div className="hidden md:flex space-x-8">{navLinks.map(link => ( <a key={link} href={`#${link.toLowerCase()}`} className="text-slate-600 hover:text-blue-600 transition-colors font-medium">{link}</a> ))}</div>
                     <div className="md:hidden"><button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-800">{isMenuOpen ? <CloseIcon /> : <MenuIcon />}</button></div>
                 </div>

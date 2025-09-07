@@ -13,6 +13,7 @@ import AuroraBackground from './components/AuroraBackground';
 import ContactDock from './components/ContactDock';
 import StaticBackground from './components/StaticBackground';
 import TechStackSection from './components/TechStackSection';
+import VideoSection from './components/VideoSection';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <OrganizationSection />
         <EducationSection />
         <ProjectsSection />
+        <VideoSection />
       </main>
       <Footer />
       <ContactDock />
